@@ -1,0 +1,12 @@
+h1{
+    color: green;
+    text-align: center;
+}
+/* . class voor meerdere elementen.  de # voor een id enkel 1 element */
+.company{
+    color: darkcyan;
+    text-align: center;
+    border: 1px dashed lightcoral;
+    padding: 50px;  /* binnenkant */
+    margin: 20px; /* buitenkant*/
+}
