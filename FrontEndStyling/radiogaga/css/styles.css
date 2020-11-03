@@ -6,10 +6,7 @@ html{
 }
 body{
     width: 96%;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;
+    margin: 0 auto auto 5%;
     border:  1px solid;
     overflow: inherit;
     background-color: #fff;
@@ -22,4 +19,31 @@ body{
 h3{
     margin: 0;
     box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+    margin: 5px 0px;
+}
+nav{
+    width: 100%;
+}
+nav ul{
+    text-align: center;
+    margin: 0 0 0 0;
+    padding-left: 0;
+}
+nav ul li{
+    list-style-type: none;
+    width: 25%;
+    background: linear-gradient(#9fb3b5, #e3e9ea, #7c9799);
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+nav ul li a{
+    font-size: 1.7rem;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+nav ul li a:hover, nav ul li a:focus{
+    color: firebrick;
+    letter-spacing: 5px;
 }
