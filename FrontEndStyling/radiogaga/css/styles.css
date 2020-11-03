@@ -46,4 +46,5 @@ nav ul li a{
 nav ul li a:hover, nav ul li a:focus{
     color: firebrick;
     letter-spacing: 5px;
+    background-color: yellow;
 }

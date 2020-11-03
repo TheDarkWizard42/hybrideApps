@@ -1,0 +1,27 @@
+body{
+    background-color: #304057;
+    margin: 0;
+    text-align: center;
+}
+nav{
+    width: 100%;
+}
+nav ul li{
+    background: linear-gradient(#e2814d, #fdb903, #e2814d);
+    float: left;
+    list-style-type: none;
+    width: 25%;
+}
+h1{
+    color: #e2814d;
+}
+p{
+    color: white;
+}
+footer{
+    background-color: #da5e5a;
+    color: black;
+    position: fixed;
+bottom: 0;
+width: 100%;
+}
