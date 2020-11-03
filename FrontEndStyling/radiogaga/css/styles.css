@@ -5,8 +5,8 @@ html{
     overflow: auto;
 }
 body{
-    width: 96%;
-    margin: 0 auto auto 5%;
+    width: 100%;
+    margin: 0;
     border:  1px solid;
     overflow: inherit;
     background-color: #fff;
