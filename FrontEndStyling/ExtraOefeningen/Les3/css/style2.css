@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: greenyellow;
+    padding: 25px;
+}
+footer{
+    background-color: greenyellow;
+    padding: 25px;
+}
+main{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+nav{
+    width: 25%;
+background-color: green;
+}
+article{
+    width: 50%;
+}
+aside{
+    width: 25%;
+    background-color: green;
+}
