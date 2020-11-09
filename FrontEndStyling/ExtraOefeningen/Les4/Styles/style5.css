@@ -1,0 +1,9 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightgrey;
+  }
+  th, td {
+    width: 100px;
+    text-align: left;    
+  }

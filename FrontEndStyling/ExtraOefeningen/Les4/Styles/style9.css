@@ -1,0 +1,21 @@
+
+
+main{
+    background-image: url("../images/mario_bg.jpg");
+    height: 500px;
+    width: 1000px;
+    background-position: center;
+}
+.SMT{
+    padding-top: 70px;
+    color: rgb(235, 72, 22);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.Mario{
+    margin-top: 200px;
+    width: 50px;
+}
+.wallpaper{    
+    text-align: center;
+}

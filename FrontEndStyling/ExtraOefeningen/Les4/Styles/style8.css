@@ -1,0 +1,19 @@
+
+@keyframes vallen {
+    to{
+        transform: translate(0px, 100vh) rotate(360deg) ;
+    }
+}
+
+.blok1{
+    animation-name: vallen;
+    animation-duration: 2s;
+}
+.blok2{
+    animation-name: vallen;
+    animation-duration: 4s;
+}
+.blok3{
+    animation-name: vallen;
+    animation-duration: 6s;
+}

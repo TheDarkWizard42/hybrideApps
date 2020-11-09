@@ -1,0 +1,20 @@
+.figuur{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    }
+    .cirkel{
+        border-radius: 50%;
+        background-color: black;
+    }
+    .rechthoek{
+        border-radius: 5%;
+        background-color: orange;
+        top: 50px;
+    }
+    .ronderand{
+        border-radius: 20%;
+        background-color: blue;
+        left: 80px;
+        top: 50px;
+    }
