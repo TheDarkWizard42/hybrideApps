@@ -1,0 +1,30 @@
+body{
+    color: #475c6c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+#cursus{
+    width: 80%;
+    margin: auto;
+    background-color: #eed7a1;
+}
+#html{
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-image: url(../images/html.png);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    background-position: top center;
+    background-color: #f7efd2;
+}
+#css{
+    background-repeat: no-repeat;
+    background-image: url(../images/css.png);
+    background-position: bottom right;
+    width: 80%;
+    margin: auto;
+    height: 200px;
+    background-color: #cd8b62;
+}
