@@ -21,8 +21,18 @@
             <li><a href="about.html">Over mij</a></li>
         </ul>
     </nav>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i> Top</button>
     <main>
-        <h1>Wie ben ik?</h1>
+        <h1>Navigatie Links</h1>
+        <h3><a href="#wie">Wie ben ik?</a></h3>
+        <h3><a href="#vrijeTijd">In mijn vrije tijd</a></h3>
+        <h3><a href="#Series">Series</a></h3>
+        <h3><a href="#Films">Films</a></h3>
+        <h3><a href="#Boeken en muziek">Boeken en muziek</a></h3>
+        <h3><a href="#Gaming">Gaming</a></h3>
+        <h3><a href="#einde">Nog 2 foto's</a></h3>
+
+        <h1 id="wie">Wie ben ik?</h1>
         <div class="metFoto">
             <p>Hallo ik ben Maxim ruysch, <br><br>
                 Ik ben een dieren/natuur liefhebber, IT-fanaat, film en serie liefhebber, gamer, lezer, circusartiest,
@@ -33,8 +43,8 @@
                 september 2021.</p>
             <img id="snowAngel" src="../images/IMG_1434.JPG" alt="Snow Angel">
         </div>
-        <h1>In mijn vrije tijd</h1>
-        <h2>Series</h2>
+        <h1 id="vrijeTijd">In mijn vrije tijd</h1>
+        <h2 id="Series">Series</h2>
         <div class="metFoto">
             <img id="tardis" src="../images/tardis.png" alt="tardis">
             <p>Ik kijk vele series. Over de jaren heen heb ik er dan ook al heel wat versleten en sommige zelfs 2X. een
@@ -56,7 +66,7 @@
                 over het brein van illusies tot hoe het de wereld voor jou ziet.
             </p>
         </div>
-        <h2>Films</h2>
+        <h2 id="Films">Films</h2>
         <div class="metFoto">
             <img class="film" src="../images/TNBC.jpg" alt="The nightmare before Christmas">
             <p>De lijst films die ik gezien is uiteraard nog veel langer dan de lijst series. Op mijn NAS (network
@@ -76,7 +86,7 @@
                 oudejaarsavond of nieuwjaarsdag.</p>
             <img class="film" src="../images/ROTG.jpg" alt="Rise of the Guardians">
         </div>
-        <h2>Boeken en muziek</h2>
+        <h2 id="Boeken en muziek">Boeken en muziek</h2>
         <p>De onderstaande foto zegt wel alles denk ik dan. I like it heavy, zowel mijn, muziek <i
                 class="fas fa-fist-raised"></i> als mijn boeken <i class="fas fa-book"></i> <br> Ik lees
             hoofdzakelijk
@@ -92,7 +102,7 @@
             <img class="film" src="../images/LOTR.jpg" alt="Lord of the Rings">
         </div>
 
-        <h2>En last but not least: Gaming</h2>
+        <h2 id="Gaming">En last but not least: Gaming</h2>
         <p>Ik kan niet zeggen dat ik weinig game. Met 10,5 jaar activiteit op steam alleen al heb ik op het moment van
             schrijven 4938 uren gegamed. Op pc heb ik dan ook nog uren Runescape gespeeld vroeger, rollercoaster Tycoon
             (1 en 3), zoo tycoon, freddy fish, spelle.nl, Overwatch, Command and Conquer, etc. En dan zijn er nog alle
@@ -173,9 +183,30 @@
             <img class="fotoLapland" src="../images/sunSnow.JPG" alt="Reindeer SLeigh Ride">
         </div>
     </main>
-    <footer>
+    <footer id="einde">
 
     </footer>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 
 </html>
