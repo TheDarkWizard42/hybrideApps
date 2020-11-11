@@ -1,0 +1,21 @@
+.kader{
+    border: 1px grey solid;
+    width: 500px;
+    height:600px;
+}
+ul{
+    display: flex;
+    justify-content: left;
+    background-color: olive;
+    padding: 15px 0px;
+    margin: 0;
+}
+li{
+    list-style: none;
+    border-right: 2px solid white;
+    padding: 0px 10px;
+    color: white;
+}
+li:nth-last-child(1){
+    border: none;
+}

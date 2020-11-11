@@ -1,0 +1,14 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    }
+    .a {
+    width:200px;
+    height:260px;
+    border: 1px solid black;
+    }
+    .b{
+    box-sizing: border-box;
+    width:202px;
+    height:262px;
+    border: 1px solid black;
+    }

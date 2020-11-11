@@ -1,0 +1,21 @@
+.wallpaper{
+    width: 800px;
+    height: 800px;
+    background-image: url("../images/bg_biz.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.Welkom{
+    color: white;
+    width: 400px;
+    height: 400px;
+    background-color:rgba(0, 0, 0, 0.4);
+    text-align: justify;
+    margin:30px ; 
+    padding: 20px;
+    border-radius: 10px;
+}

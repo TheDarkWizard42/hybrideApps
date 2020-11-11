@@ -1,0 +1,12 @@
+ul {
+    padding: 0;
+    margin: 0;
+    background: #eee;
+    }
+    .systemen{
+        list-style: none;
+    }
+    li{
+        padding: 10px 15;
+        border: deepskyblue dotted 3px;
+    }
