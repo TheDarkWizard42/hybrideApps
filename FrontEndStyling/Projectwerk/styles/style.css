@@ -16,7 +16,7 @@ nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 1% 0;
+    margin: 10px 0;
     height: 10%;
 }
 nav ul li{
@@ -50,7 +50,7 @@ main{
     display: flex;
 }
 
-#snowAngel{
+#snowAngel, #wapenschild{
     max-height: 270px;
     margin-left: 10px;
 }
@@ -96,4 +96,13 @@ p a{
 }
 footer{
     margin-bottom: 25px;
+}
+#pictureHomepage{
+max-width: 100%;
+margin: 10px 0;
+}
+#Heist{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
