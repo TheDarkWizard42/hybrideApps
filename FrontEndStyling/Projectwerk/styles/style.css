@@ -35,6 +35,12 @@ a{
     text-decoration: none;
     color: #bfd8bd;
 }
+#navigatie{
+background-color: #bfd8bd;
+width: max-content;
+padding: 10px;
+border-radius: 10px;
+}
 h3{
     margin: 5px 0px;
 }
@@ -83,6 +89,9 @@ main{
 }
 p a{
     color: #439777;
+}
+p a:hover{
+    color: #77bfa3;
 }
 .games{
     display: flex;
