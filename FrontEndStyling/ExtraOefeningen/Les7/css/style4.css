@@ -1,0 +1,15 @@
+body{
+    font-family: Helvetica;
+    font-size: 1.5em;
+}
+legend{
+    font-size: 0.7em;
+}
+.knop{
+    text-align: center;
+}
+input[type=submit]{
+    background-color: green;
+    color: white;
+    height: 35px;
+}

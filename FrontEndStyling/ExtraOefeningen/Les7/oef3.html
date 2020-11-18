@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oef3</title>
+</head>
+
+<body>
+    <main>
+        <h1>Inschrijving</h1>
+        <form action="">
+            <fieldset class="gegevens">
+                <legend>Persoonlijke gegevens</legend>
+                <label for="name">Naam </label>
+                <input type="text" placeholder="uw naam" name="naam" id="name"><br>
+                <label for="firstname">Voornaam </label>
+                <input type="text" placeholder="uw voornaam" name="voornaam" id="firstname"><br>
+                <input type="radio" name="geslacht" value="Man">
+                <label for="man">Man</label>
+                <input type="radio" name="geslacht" value="Vrouw">
+                <label for="vrouw">Vrouw</label><br>
+                <label for="province">Provincie</label>
+                <select name="provincie" id="province">
+                    <option value="Antwerpen">Antwerpen</option>
+                    <option value="De Limburg">De Limburg</option>
+                    <option value="Vlaams-Brabant">Vlaams-Brabant</option>
+                    <option value="Brussel">Brussel</option>
+                </select>
+
+            </fieldset>
+            <fieldset>
+                <legend>Opleidingsmodules</legend>
+                <input type="checkbox" name="HTML" id="html">
+                <label for="html">HTML/CSS</label>
+                <input type="checkbox" name="javascript" id="js">
+                <label for="js">Javascript</label>
+                <input type="checkbox" name="Angular" id="angular">
+                <label for="angular">Angular</label>
+                <input type="checkbox" name="Ionic" id="ionic">
+                <label for="ionic">Ionic</label>
+            </fieldset>
+            <input type="submit" name="send" value="Formulier verzenden">
+        </form>
+    </main>
+</body>
+
+</html>

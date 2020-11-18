@@ -1,0 +1,27 @@
+.blokje {
+    height: 15em;
+    width: 15em;
+    background-color: green;
+    border: 1px solid #cdcdcd;
+margin: auto;
+}
+@media only screen and (min-width: 600px) {
+    .blokje{
+        background-color: red;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .blokje{
+        background-color: yellow;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .blokje{
+        background-color: purple;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .blokje{
+        background-color: blue;
+    }
+}

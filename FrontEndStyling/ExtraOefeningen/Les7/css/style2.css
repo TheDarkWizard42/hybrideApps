@@ -1,0 +1,28 @@
+.TheGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap: 2px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+.gridGroot{
+    grid-row: 1/4;
+    grid-column: 2/4;
+}
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: black;
+    }
+    .TheGrid{
+        grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7,1fr);
+    }
+    .gridGroot{
+        grid-row: 6/8;
+        grid-column: 1/3;
+    }
+}

@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    color: white;
+}
+fieldset{
+    background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+legend{
+    color: black;
+}
+input[type=submit] {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 25%;
+    padding: auto;
+    background-color: rgb(29, 16, 206);
+    height: 2em;
+}
