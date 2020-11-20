@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oef7</title>
+    <style>
+        body {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100vh;
+
+            background-image: url(./img/seaside.jpg);
+
+            background-position: center;
+
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        input[type=date] {
+            border: none;
+        }
+
+        form {
+            background-color: white;
+            display: flex;
+        }
+
+        h1 {
+            color: rgb(160, 115, 55);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 15px;
+        }
+
+        input[type=submit] {
+            background-color: rgb(160, 115, 55);
+            height: 70%;
+            width: 100px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/submitpage " method="get">
+        <h1>boek nu!</h1>
+        <div> <label for="checkin">Check in:</label>
+            <input type="date" id="checkin" name="checkin"></div>
+        <div><label for="checkout">Check out:</label>
+            <input type="date" id="checkout" name="checkout"></div>
+        <div><label for="aantal">Volwassenen</label>
+            <input type="number" id="aantal" name="aantal" min="1"></div>
+        <div> <label for="quantity">Kinderen</label>
+            <input type="number" id="quantity" name="quantity" min="0"></div>
+        <div><input type="submit" value="Submit"></div>
+
+    </form>
+</body>
+
+</html>

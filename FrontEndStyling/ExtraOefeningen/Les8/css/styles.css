@@ -1,0 +1,118 @@
+body{
+    background-color: rgb(253, 253, 250);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+}
+main{
+    width:800px;
+    margin:auto;    
+}
+#lijn1,#lijn2{
+    margin-bottom:20px;
+}
+#lijn2{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+
+.naam{
+    
+    font-size:1.3rem;
+}
+.imagesbox{
+    display:grid;
+    grid-template-columns: repeat(3,260px);
+    grid-gap:10px;
+    
+}
+input[type=submit]{
+    padding:5px;
+    border:1px solid #cecece;
+    font-weight:600;
+    font-size: 0.7rem;
+    margin-left:20px;
+    margin-right:10px;
+}
+.top{
+    margin:40px 0px 40px 0px;
+    display:flex;
+    
+}
+.info{
+    padding:10px;
+}
+
+main img{
+    width:260px;
+}
+#links{
+    width:270px;
+}
+#avatar{
+    background-image: url(../img/avatar.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+    margin:auto;
+}
+
+.foto img {
+    position: absolute;
+    width: 260px;
+}
+
+.foto {
+    position:relative;
+    width: 260px;
+    height: 260px;
+}
+.iconlaag{
+    position:absolute;
+    background-color: rgba(0,0,0,0.4);
+    width:260px;
+    height:260px;
+    opacity:0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.iconlaag2{
+    position:absolute;
+    right:10px;
+    top:10px;
+    z-index:2;
+    font-size: 1rem;
+    color:white;
+    
+}
+
+.icons{
+
+}
+.iconlaag:hover{
+    opacity:1;
+    
+}
+.icons {
+    color:white;
+    
+   
+}
+.topicon{
+    justify-self: flex-end;
+    align-self: flex-start;
+    opacity:0.7;
+}
+
+/*.foto:hover img {
+    width: 260px;
+    height: 260px;
+    opacity: 1;
+}*/
+
