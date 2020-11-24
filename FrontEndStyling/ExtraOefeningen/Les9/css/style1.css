@@ -1,0 +1,5 @@
+div[class^=col] {
+    border: 1px solid black;
+    background: #CECECE;
+    padding: 15px;
+    }
