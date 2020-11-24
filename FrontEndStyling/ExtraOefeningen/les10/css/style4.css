@@ -1,0 +1,63 @@
+.zijbar{
+    height:100vh;
+    position: fixed;
+    overflow: hidden;
+    width: 15%;
+}
+
+.admin-main{
+    margin-left: 15%;
+}
+@media only screen and (max-width: 768px) {
+    .admin-main{
+        margin-left: 0%;
+    }
+  }
+  .dropdown-tree {
+    flex-direction: column
+}
+.dropdown-tree .dropdown-menu {
+    position: relative!important;
+    transform: none!important;
+    float: none;
+    left: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #373A3C;
+    background-color: #555;
+    border-radius: 0;
+    border: none;
+}
+.dropdown-tree .dropdown-toggle:after {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    margin-left: .3em;
+    vertical-align: middle;
+    content: "";
+    border: .4em solid transparent;
+    border-right-color: currentcolor
+}
+.dropdown-tree.show .dropdown-toggle:after {
+    margin-top: 3px;
+    display: inline-block;
+    margin-left: 10px;
+    border-top: .4em solid;
+    border-right: .4em solid transparent;
+    
+}
+.dropdown-tree .dropdown-item {
+    white-space: normal;
+    padding: 3px 0;
+
+}
+.admin-sidebar .dropdown-menu a:hover {
+    color: #373A3C
+}
+.dropdown-tree .dropdown-toggle:after {
+    position: absolute;
+    right: 20px;
+    top: 10px
+}
