@@ -1,0 +1,23 @@
+@mixin mybox ($size) {
+    background-color: green;
+    width: $size;
+    height: $size;
+}
+
+.box1 {
+    @include mybox(100px);
+}
+
+.box2 {
+    @include mybox(200px);
+}
+
+.box3 {
+    @include mybox(300px);
+}
+
+div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,26 @@
+$font: Helvetica, sans-serif;
+    $fontKop:Courier;
+    $colorKop: red;
+    $fontGrootte: 18px;
+
+body {
+    font-family: $font;
+    font-size: $fontGrootte;
+    }
+    h1 {
+    font-family: $fontKop;
+    color: $colorKop;
+    font-size: $fontGrootte*4;
+    }
+    h2 {
+    font-family: $fontKop;
+    color: $colorKop;
+    font-size: $fontGrootte*3;
+    }
+    h3 {
+    font-family: $fontKop;
+    color: $colorKop;
+    font-size: $fontGrootte*2;
+    }
+
+    

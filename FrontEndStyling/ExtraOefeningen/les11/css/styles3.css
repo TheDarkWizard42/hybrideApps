@@ -1,0 +1,37 @@
+nav {
+  overflow: hidden;
+  background: #20b2df;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav ul li {
+  float: left;
+  font: Verdana;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  padding: 15px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  font: bold italic;
+}
+
+body {
+  margin: 0;
+}
+
+Main {
+  clear: both;
+  width: 100%;
+  margin: 0 10%;
+  font: Arial;
+  background: #deeaeb;
+  padding: 2em 0;
+}
+
+/*# sourceMappingURL=styles3.css.map */

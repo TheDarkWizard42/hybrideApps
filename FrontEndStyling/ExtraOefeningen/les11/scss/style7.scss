@@ -1,0 +1,49 @@
+@mixin logo($color1) {
+
+    color: $color1;
+    background-color: white;
+    margin: 20px;
+
+
+    i {
+        font-size: 60px;
+    }
+
+    &:hover {
+        transform: translate(15px, -15px);
+        color: white;
+        background-color: $color1;
+
+    }
+}
+
+div {
+    height: 85px;
+    width: 85px;
+    box-shadow: -20px 20px 10px rgb(0, 0, 0, 0.5);
+
+    &:hover {
+        box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+    }
+}
+
+
+body {
+    height: 100vh;
+}
+
+.logo1 {
+    @include logo(orange);
+}
+
+.logo2 {
+    @include logo(blue);
+}
+
+.logo3 {
+    @include logo(#c69);
+}
+
+.logo4 {
+    @include logo(#563d7c);
+}

@@ -1,0 +1,68 @@
+div {
+  height: 85px;
+  width: 85px;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+div:hover {
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  height: 100vh;
+}
+
+.logo1 {
+  color: orange;
+  background-color: white;
+  margin: 20px;
+}
+.logo1 i {
+  font-size: 60px;
+}
+.logo1:hover {
+  transform: translate(15px, -15px);
+  color: white;
+  background-color: orange;
+}
+
+.logo2 {
+  color: blue;
+  background-color: white;
+  margin: 20px;
+}
+.logo2 i {
+  font-size: 60px;
+}
+.logo2:hover {
+  transform: translate(15px, -15px);
+  color: white;
+  background-color: blue;
+}
+
+.logo3 {
+  color: #c69;
+  background-color: white;
+  margin: 20px;
+}
+.logo3 i {
+  font-size: 60px;
+}
+.logo3:hover {
+  transform: translate(15px, -15px);
+  color: white;
+  background-color: #c69;
+}
+
+.logo4 {
+  color: #563d7c;
+  background-color: white;
+  margin: 20px;
+}
+.logo4 i {
+  font-size: 60px;
+}
+.logo4:hover {
+  transform: translate(15px, -15px);
+  color: white;
+  background-color: #563d7c;
+}

@@ -1,0 +1,29 @@
+$size:50px;
+
+%cirkel {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.circle1 {
+    @extend %cirkel;
+    background-color: red;
+
+}
+
+.circle2 {
+    @extend %cirkel;
+    background-color: purple;
+}
+
+.circle3 {
+    @extend %cirkel;
+    background-color: green;
+}
+
+.circle4 {
+    @extend %cirkel;
+    background-color: darkred;
+}

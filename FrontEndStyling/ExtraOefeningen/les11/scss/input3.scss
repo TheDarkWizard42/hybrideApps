@@ -1,0 +1,43 @@
+@use 'fonten';
+
+nav {
+    overflow: hidden;
+    background: rgb(32, 178, 223);
+    width: 100%;
+
+    ul {
+        display: flex;
+
+        li {
+            font: fonten.$navFont;
+            color: white;
+
+            display: block;
+
+
+            text-align: center;
+            font-size: 17px;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    font: bold italic;
+                }
+            }
+
+            padding: 15px;
+        }
+    }
+}
+
+body {
+    margin: 0;
+}
+
+Main {
+    width: 100%;
+    font: fonten.$mainFont;
+    background: rgb(222, 234, 235);
+    padding: 2em 0;
+}
