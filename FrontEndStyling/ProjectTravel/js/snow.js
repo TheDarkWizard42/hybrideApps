@@ -16,7 +16,7 @@ var flakes = [],
     mY = -100
 
 canvas.width = window.innerWidth;
-canvas.height = document.body.scrollHeight;
+canvas.height =document.body.clientHeight;
 
 function snow() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -111,7 +111,7 @@ canvas.addEventListener("mousemove", function (e) {
 
 window.addEventListener("resize", function () {
     canvas.width = window.innerWidth;
-    canvas.height = document.body.scrollHeight;
+    canvas.height = document.body.clientHeight;
 })
 
 init();

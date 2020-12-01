@@ -1,0 +1,56 @@
+<!doctype html>
+<title>OEF3</title>
+<link rel="stylesheet" href="css/style2.css">
+
+<body>
+
+    <h1>Inschrijving</h1>
+    <form>
+        <fieldset>
+            <legend>Persoonlijke gegevens</legend>
+            <ul class="wrapper">
+                <li class="form-row">
+                    <label for="name">Naam</label>
+                    <input type="text" placeholder="uw naam" id="name">
+                </li>
+                <li class="form-row">
+                    <label for="townborn">Voornaam</label>
+                    <input type="text" placeholder="Uw voornaam" id="townborn">
+                </li>
+                <li class="radio">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Man</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Vrouw</label><br>
+                </li>
+                <li class="list">
+                    <label for="locaties">Provincie</label>
+                    <input list="locaties" name="locatie">
+                    <datalist id="locaties">
+                        <option value="Antwerpen">
+                        <option value="Leuven">
+                        <option value="Gent">
+                        <option value="Brussel">
+                        <option value="Neerpelt">
+                    </datalist>
+
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset class="check">
+            <legend>Opleidingsmodules</legend>
+            <input type="checkbox" id="HTML/CSS" name="HTML/CSS" value="HTML/CSS">
+            <label for="HTML/CSS"> HTML/CSS</label><br>
+            <input type="checkbox" id="Javascript" name="Javascript" value="Javascript">
+            <label for="Javascript">Javascript</label><br>
+            <input type="checkbox" id="Angular" name="Angular" value="Angular">
+            <label for="Angular">Angular</label>
+            <input type="checkbox" id="Ionic" name="Ionic" value="Ionic">
+            <label for="Ionic">Ionic</label>
+        </fieldset>
+        <div class="button">
+            <button class="send" type="submit">Formulier verzenden</button>
+        </div>
+
+    </form>
+</body>
