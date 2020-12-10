@@ -1,0 +1,44 @@
+p, body, .row{
+    margin:0;
+}
+body{
+    overflow-x: hidden;
+}
+li{
+    a{
+        color: black;
+        font-weight: bold;
+        &:hover{
+            color: beige;
+        }
+    }
+}
+.carousel-indicators{
+        
+        
+       li{margin: 20px;
+        text-indent: 0px;
+           i{ font-size: 30px;
+    color: grey;}}  
+}
+
+.spacing{
+    margin: 30px 0;
+}
+.banner{
+    padding: 20px 0;
+    color: white;
+}
+.rotate{
+    transform: rotate(-5deg);
+    margin-bottom: 50px;
+}
+h1{
+    font-size: 30px;
+}
+.form-row{
+    margin-bottom: 20px;
+}
+.border-10{
+    border:5px solid darkblue;
+      }

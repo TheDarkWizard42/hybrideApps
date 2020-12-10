@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oef5</title>
+</head>
+
+<body>
+    <script>
+        var einddatum = prompt("Wat is de einddatum JJJJ-MM-DD?");
+        var deadline = new Date(einddatum);
+        var day = deadline.getDate();
+        var month = deadline.getMonth() + 1;
+        var year = deadline.getFullYear();
+        document.write("Deadline: " + day + "/" + month + "/" + year + "<br>");
+        var huidigedatum = Date.now();
+        var dag = 86400000
+        var resterende = ((Number(deadline) - huidigedatum) / dag);
+        document.write("Deadline: " + day + "/" + month + "/" + year + " Er zijn nog: " + resterende.toFixed(0) + " dagen te gaan!");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEF3</title>
+</head>
+
+<body>
+
+    <script>
+        var testarray = ["een", "twee", 3, "vier"];
+        testarray.push(5);
+        toonArray(testarray);
+        document.write(typeof testarray[4] + "<br><br>");
+        testarray.pop();
+        toonArray(testarray);
+        testarray.unshift('nul');
+        toonArray(testarray);
+        delete testarray[0];
+        document.write(typeof testarray[0] + "<br><br>");
+        testarray.shift();
+        toonArray(testarray);
+        testarray.splice(1, 1);
+        toonArray(testarray);
+        if (testarray.length >= 3) {
+            testarray.splice(2, 1);
+        }
+        toonArray(testarray);
+
+
+        function toonArray(array) {
+            testarray.forEach((element) => {
+                document.write(element + "<br>");
+            });
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>
