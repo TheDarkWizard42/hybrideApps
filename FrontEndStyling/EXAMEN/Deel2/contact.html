@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 2</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <header id="nav" class="container">
+        <div class="row">
+            <nav class="col navbar navbar-expand-md navbar-light bg-light  justify-content-between">
+                <a class="navbar-brand" href="#"><i class="fas fa-hamburger purpleText"></i>Bootstrap burgers</a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav ">
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#Menu">Menu</a>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link" type="button" data-toggle="modal" data-target="#actionModal">Acties</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <form class="form-inline my-2 my-lg-0 ">
+                    <input class="form-control d-none d-md-block mr-sm-2" type="search" placeholder="Zoeken"
+                        aria-label="Search">
+
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container formulier py-3">
+        <h1 class="text-center">Contacteer Ons</h1>
+        <div class="d-flex justify-content-center px-3">
+            <div class="row">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col col-md-8">
+                            <label for="name">Naam</label>
+                            <input type="text" class="form-control" id="name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col col-md-8">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Straat</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputAddress2">Postcode</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Gemeente</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputState">Land</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Selecteer</option>
+                                <option>België</option>
+                                <option>Nederland</option>
+                                <option>Duitsland</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleFormControlTextarea1">Bericht</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Versturen</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="d-flex justify-content-between container mt-3">
+        <p>&copy;2020-Bootstrap Burgers door Ruysch Maxim</p>
+        <p><a class="purpleText" href="#nav">Naar boven</a></p>
+    </footer>
+    <!-- MODAL -->
+    <div class="modal fade" id="actionModal" tabindex="-1" role="dialog" aria-labelledby="actionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Helaas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Het spijt ons. Momenteel zijn er geen promoties.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

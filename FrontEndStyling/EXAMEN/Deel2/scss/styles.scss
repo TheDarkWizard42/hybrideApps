@@ -1,0 +1,73 @@
+@mixin spanInline($kleur1, $kleur2) {
+    padding: 2px;
+    background-color: $kleur1;
+    color: $kleur2;
+    border-radius: 0.25rem;
+}
+.nieuwSpan{
+    @include spanInline(goldenrod,black )
+}
+.topperSpan{
+    @include spanInline(green,white )
+}
+.purpleText{
+    color: #7952b3;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+input[type=search]{
+    border: #7952b3 solid;
+&:focus{
+    color: #7952b3;
+    font-weight: bold;
+}
+  }
+  .carousel-indicators {
+      margin: 0 20px 0 0;
+      & li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;}
+}
+
+    
+.carousel-caption{ 
+text-align: left;
+    position: absolute;
+    width: auto;
+    top: 20px;
+    left: 5%;
+   
+    h5{
+
+        padding: 0.3em;
+        font-size: 3em;
+    }
+    p{
+        font-size: 2em;
+        font-family: 'Changa One', cursive;
+    }
+}
+.rounded{
+    border-radius: 0.25rem;
+}
+.rw{
+    display: inline-block;
+    background-color: #ec5353;
+    color: white;
+    font-family: 'Changa One', cursive;
+}
+.card-title:hover{
+    transform: scale(1.5)rotate(-10deg);
+    cursor: pointer;
+}
+.formulier, .formulier input, .formulier textarea{
+    background-color: #f2f3f8;
+    
+}
+.formulier input{
+    border:0;
+    border-bottom: #ced4da Solid 1px;
+    border-radius: 0px;
+}

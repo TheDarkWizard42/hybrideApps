@@ -1,0 +1,103 @@
+@mixin donker{
+    background-color: #075179;
+    color: white;
+}
+
+body, html{
+    margin: 0px;
+    padding: 0px;
+}
+header, footer{
+    width: 100%;
+    @include donker();
+    h1{
+    margin: 0px;
+    top: 0px;
+    padding: 5px;
+}}
+main{
+    display: flex;
+    flex-direction: row;
+    
+}
+.achtergrond{
+    background-image: url("../img/sidebar-5.jpg");
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 400px;
+    opacity: 0.3;
+   
+    object-fit: cover;
+    position: absolute;
+}
+.nav{
+    flex-basis: 300px;
+    flex-shrink: 0;
+    background: linear-gradient(0deg, rgba(97, 177, 220,0.67), rgba(7, 81, 121,0.67));
+    height: 100%;
+   position: relative;
+   border-right: #075179 solid 3px;
+}    
+
+ul{
+    list-style: none;
+    li{
+margin: 1em;
+padding: 1em;
+    &:hover{
+border-radius: 5px;
+@include donker();
+a{
+    color: white;
+}
+        }
+    }
+    a{
+        text-decoration: none;
+color: black;
+    }
+}
+.hoofdTekst{
+    padding: 0.5em;
+}
+h3{
+    text-align: center;
+}
+footer{
+    padding: 0.5em 0 0.5em 1em;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    main{
+        flex-direction: column;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+    .nav{
+        flex-basis: 0px;
+        background: #61b1dc;
+        .menu{
+            display: none;
+        }
+    }
+    .achtergrond{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    h1{
+        text-align: center;
+    }
+    ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
