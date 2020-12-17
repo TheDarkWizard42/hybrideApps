@@ -1,0 +1,23 @@
+body{
+    background-image: url(../img/nordwood-themes-KcsKWw77Ovw-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#picture{
+    height: 400px;
+    width: 400px;
+    background-image: url(../img/pic1.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    transition: 0.5s;
+}
+i{
+    font-size: 50px;
+}
+#buttons{
+    width: 400px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}

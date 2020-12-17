@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oef6</title>
+</head>
+
+<body>
+    <script>
+        var bezorgkosten = 0;
+        var klantnaam = prompt('Voer je eigen naam in: ');
+        var aantal = parseInt(prompt("Aantal boeken te bestellen?: "));
+        var titel = "Javascript";
+        var prijs = 29.90;
+        var bedrag = aantal * prijs;
+        var btw = Number((bedrag / 100 * 6).toFixed(2));
+        var totaal = (bedrag + btw).toFixed(2);
+        var datum = new Date();
+        var woonplaats = prompt("Geef uw woonplaats in: ");
+        var postcode = prompt("Geef uw postcode in: ").toUpperCase();
+        if ('1000AA' <= postcode && '2000BB' >= postcode) {
+            alert("U betaalt geen bezorgkosten")
+        }
+        else {
+            alert("U betaalt €15 bezorgkosten")
+            bezorgkosten = 15;
+        }
+        document.write("Factuur <br>");
+        document.write("Factuurdatum: " + datum.getDate() + '-' + (datum.getMonth() + 1) + '-' + datum.getFullYear() + ' <br>');
+        document.write("Betaaldatum: " + (datum.getDate() + 5) + '-' + datum.getMonth() + '-' + datum.getFullYear());
+        document.write("<br> Bedankt voor je bestelling:" + klantnaam);
+        document.write("<br> Boektitel is: " + titel);
+        document.write("<br> Aantal te bestellen: " + aantal);
+        document.write("<br> Prijs per boek is: " + prijs.toFixed(2));
+        document.write("<br> Bedrag is " + bedrag);
+        document.write("<br> BTW is " + btw);
+        document.write("<br> Totaal inclusief BTW is: " + totaal + bezorgkosten);
+    </script>
+</body>
+
+</html>

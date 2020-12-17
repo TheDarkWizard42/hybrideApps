@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEF15</title>
+</head>
+
+<body>
+    <script>
+        var tekst = "Dit document is een lang document maar ook een simpel document";
+        var resultaat = vervangen(tekst, 'document', 'script');
+
+        function vervangen(tekst, woord, nieuwewoord) {
+            var arrTekst = tekst.split(" ");
+            for (var i = 0; i < arrTekst.length; i++) {
+                if (arrTekst[i] == woord) {
+                    arrTekst[i] = nieuwewoord;
+                }
+            }
+            var nieuweTekst = arrTekst.join(" ");
+            document.write(nieuweTekst);
+        }
+
+    </script>
+</body>
+
+</html>

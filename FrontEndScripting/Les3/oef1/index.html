@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="picture"></div>
+    <div id=" ">
+        <i class="fas fa-arrow-alt-circle-left" onclick="prev()"></i>
+        <i class="fas fa-arrow-alt-circle-right" onclick="next()"></i>
+        <i class="fas fa-search-plus" onclick="zoom(50)"></i>
+        <i class="fas fa-search-minus" onclick="zoom(-50)"></i>
+        <i class="fas fa-redo" onclick="rotate()"></i>
+    </div>
+    <script>
+        var arrImages = [
+            'img/pic1.jpg',
+            'img/pic2.jpg',
+            'img/pic3.jpg'
+        ]
+        var imageindex = 0;
+        var pictureWidth = 400;
+        var pictureHeight = 400;
+        var picdegrees = 0;
+
+        function zoom(pixels) {
+            pictureWidth += pixels;
+            pictureHeight += pixels;
+            document.getElementById("picture").style.width = pictureWidth + "px";
+            document.getElementById("picture").style.height = pictureHeight + "px";
+        }
+        function rotate() {
+            picdegrees += 45;
+            document.getElementById("picture").style.transform = `rotate(${picdegrees}deg`;
+        }
+
+        function prev() {
+            if (imageindex > 0) {
+                imageindex--;
+
+            }
+            else {
+                imageindex = arrImages.length - 1
+            }
+            document.getElementById("picture").style.backgroundImage = 'url(' + arrImages[imageindex] + ')';
+        }
+        function next() {
+            if (imageindex < (arrImages.length - 1)) {
+                imageindex++;
+            }
+            else {
+                imageindex = 0;
+            }
+
+            document.getElementById("picture").style.backgroundImage = 'url(' + arrImages[imageindex] + ')';
+        }
+    </script>
+</body>
+
+</html>

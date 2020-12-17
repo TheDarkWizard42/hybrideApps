@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oef10</title>
+</head>
+
+<body>
+    <form name="form">
+        <input type="text" name="bedrag" id="bedrag">
+        <select name="conv">
+            <option value="dol_eur">dollar/euro</option>
+            <option value="eur_dol">euro/dollar</option>
+            <option value="rub_eur">ruble/euro</option>
+            <option value="eur_rub">euro/ruble</option>
+        </select>
+        <input type="button" value="Converteren"
+            onclick="document.getElementById('output').innerHTML=(`De omzetting van ${document.form.conv[document.form.conv.selectedIndex].text} is `+ exchange(document.form.bedrag.value, document.form.conv.value).toFixed(2))">
+    </form>
+    <div id="output"></div>
+    <script>
+        function exchange(bedrag, conversie) {
+            switch (conversie) {
+                case "dol_eur": return bedrag = bedrag * 1.36;
+
+                    break;
+                case "eur_dol": return bedrag = bedrag * 0.74;
+
+                    break;
+                case "rub_eur": return bedrag = bedrag * 48.44;
+
+                    break;
+                case "eur_rub": return bedrag = bedrag * 0.02;
+
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

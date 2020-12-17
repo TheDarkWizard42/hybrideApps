@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dagen {
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .dag {
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        #kalender .dag {
+            background-color: aqua;
+            border: 1px black solid;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="return false">
+
+        <select id="month">Selecteer maand:
+            <option value="0">Januari</option>
+            <option value="1">Februari</option>
+            <option value="2">Maart</option>
+            <option value="3">April</option>
+            <option value="4">Mei</option>
+            <option value="5">Juni</option>
+            <option value="6">Juli</option>
+            <option value="7">Augustus</option>
+            <option value="8">September</option>
+            <option value="9">Oktober</option>
+            <option value="10">November</option>
+            <option value="10">December</option>
+        </select>
+        <select id="year">Selecteer jaar:
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>
+        <button type="button"
+            onclick="calendar(document.getElementById('month').value,document.getElementById('month').options[document.getElementById('month').selectedIndex].innerHTML,document.getElementById('year').value)">print
+            calendar</button>
+    </form>
+    <div id="datum"></div>
+    <div id="dagen"></div>
+    <div id="kalender"></div>
+    <script>
+        var dagen = ["zo", "ma", "di", "wo", "do", "vr", "za"];
+        var kalender = "";
+        function calendar(month, monthtext, year) {
+            var kalender = "";
+            document.getElementById('dagen').innerHTML = "";
+            document.getElementById('datum').innerHTML = "";
+            document.getElementById('datum').innerHTML += (`<h1>${monthtext} ${year}</h1><br>`);
+            dagen.forEach(element => {
+                document.getElementById('dagen').innerHTML += (`<div class="dag">${element}</div>`);
+            });
+            var date = new Date(year, month, 1);
+            for (let index = 0; index < date.getDay(); index++) {
+                kalender += (`<div class="dag">&nbsp;</div>`);
+            }
+            var days = [];
+            while (date.getMonth() == month) {
+                days.push(new Date(date));
+                date.setDate(date.getDate() + 1);
+            }
+
+            days.forEach(element => {
+                kalender += (`<div class="dag">${element.getDate()}</div>`);
+                if (element.getDay() == 6) {
+                    kalender += (`<br>`);
+                }
+            });
+            document.getElementById('kalender').innerHTML = kalender;
+        }
+
+    </script>
+</body>
+
+</html>
