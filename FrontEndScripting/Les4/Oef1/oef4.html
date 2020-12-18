@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .afbeelding {
+            width: 100px;
+            height: 100px;
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var fruits = [{
+            name: "Apple",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/265px-Red_Apple.jpg",
+            ranking: 3
+        }, {
+            name: "Banana",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bananas_white_background_DS.jpg/320px-Bananas_white_background_DS.jpg",
+            ranking: 1
+        }, {
+            name: "Pineapple",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
+            ranking: 2
+        }];
+
+        var fruits2 = fruits.map(
+            function (elem) {
+                return { naam: elem.name, afbeelding: elem.image };
+            }
+        )
+        console.log(fruits2);
+
+        fruits2.forEach(
+            function (tonen) {
+                document.write(tonen.naam + ' ' + '<div class="afbeelding" style="background-image: url(' + tonen.afbeelding + ');"></div><br>');
+            }
+        )
+    </script>
+</body>
+
+</html>
