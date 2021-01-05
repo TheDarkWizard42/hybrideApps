@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cel = void 0;
 var Cel = /** @class */ (function () {
-    function Cel(_rij, _kolom, _inhoud) {
-        this._rij = _rij;
-        this._kolom = _kolom;
-        this._inhoud = _inhoud;
+    function Cel(rij, kolom, inhoud) {
+        this._rij = rij;
+        this._kolom = kolom;
+        this._inhoud = inhoud;
     }
     Object.defineProperty(Cel.prototype, "rij", {
         get: function () {

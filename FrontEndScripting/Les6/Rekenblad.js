@@ -48,7 +48,7 @@ var Rekenblad = /** @class */ (function (_super) {
     };
     Rekenblad.prototype.geefTeDrukken = function () {
         var string = "";
-        this._cellen.forEach(function (element) {
+        this.cellen.forEach(function (element) {
             string += "CEL " + element.kolom + element.rij + ": " + element.inhoud + "\n";
         });
         return this.titel + "\n" + string;

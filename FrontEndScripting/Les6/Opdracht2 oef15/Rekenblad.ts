@@ -29,7 +29,7 @@ export class Rekenblad extends IAfdrukbaar {
     }
     geefTeDrukken(): string {
         let string: string = "";
-        this._cellen.forEach(element => {
+        this.cellen.forEach(element => {
             string += "CEL " + element.kolom + element.rij + ": " + element.inhoud + "\n";
         })
         return `${this.titel}\n${string}`;
