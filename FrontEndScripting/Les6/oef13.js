@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Huis_1 = require("./Huis");
+var School_1 = require("./School");
+var school = new School_1.School();
+var huis = new Huis_1.Huis();
+var huis2 = new Huis_1.Huis();
+huis.aantalRuimtes = 3;
+huis2.aantalRuimtes = 5;
+school.Print();
+huis.Print();
+huis2.Print();

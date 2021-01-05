@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Lijst_1 = require("./Lijst");
+var Element_1 = require("./Element");
+var elementList = new Lijst_1.Lijst();
+var element1 = new Element_1.Element("Android", "Systeem");
+var element2 = new Element_1.Element("Versie ", "9");
+var element3 = new Element_1.Element("RAM ", "16GB");
+elementList.Voegtoe(element1);
+elementList.Voegtoe(element2);
+elementList.Voegtoe(element3);
+elementList.ToString();
+elementList.Aantal();
+elementList.Wissen();
+elementList.Aantal();

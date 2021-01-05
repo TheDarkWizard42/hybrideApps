@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var DeluxeEditionGame_1 = require("./DeluxeEditionGame");
+var Game_1 = require("./Game");
+var g1 = new Game_1.Game("trine 4", "Frozenbite", 20);
+var g2 = new Game_1.Game("trine 3", "Frozenbite", 5);
+var g3 = new Game_1.Game("trine 2", "Frozenbite", 4);
+var deg = new DeluxeEditionGame_1.DeluxeEditionGame("Ori and the will of the wisps", "Moon studio's", 20);
+console.log(g1.getVerkoopprijs());
+console.log(g2.getVerkoopprijs());
+console.log(g3.getVerkoopprijs());
+console.log(deg.getVerkoopprijs());
