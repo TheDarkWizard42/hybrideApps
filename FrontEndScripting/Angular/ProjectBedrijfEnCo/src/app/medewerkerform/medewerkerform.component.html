@@ -1,0 +1,24 @@
+<hr>
+<h1>Medewerkers</h1>
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Medewerker</label>
+        <input type="text" class="form-control" id="name" aria-describedby="name" [(ngModel)]="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">E-mail</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email" [(ngModel)]="email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Afbeelding</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" [(ngModel)]="afb" name="afb">
+    </div>
+    <button (click)="Toongegevens()" class="btn btn-primary">{{buttongeg}}</button>
+    <button id="reset" (click)="Reset()" class="btn btn-primary mx-2" [disabled]="Resetknop()">Reset</button>
+</form>
+<div id="gegevens" [ngClass]="showclass">
+    <img [src]="afb">
+    <h2>{{name}}</h2>
+    <p>Het emailadres van {{name}} is {{email}}</p>
+</div>
