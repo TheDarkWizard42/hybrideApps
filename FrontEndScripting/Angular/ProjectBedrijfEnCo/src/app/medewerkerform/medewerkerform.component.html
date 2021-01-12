@@ -14,11 +14,19 @@
         <label for="formGroupExampleInput">Afbeelding</label>
         <input type="text" class="form-control" id="formGroupExampleInput" [(ngModel)]="afb" name="afb">
     </div>
-    <button (click)="Toongegevens()" class="btn btn-primary">{{buttongeg}}</button>
-    <button id="reset" (click)="Reset()" class="btn btn-primary mx-2" [disabled]="Resetknop()">Reset</button>
+    <div class="d-flex justify-content-end">
+        <button (click)="Toevoegen()" class="btn btn-primary">Toevoegen</button>
+        <button (click)="Reset()" class="btn btn-primary mx-2" [disabled]="Resetknop()">Reset</button>
+    </div>
 </form>
-<div id="gegevens" [ngClass]="showclass">
-    <img [src]="afb">
-    <h2>{{name}}</h2>
-    <p>Het emailadres van {{name}} is {{email}}</p>
+<hr>
+
+<div *ngIf="listFilled">
+    <div *ngFor="let mw of medewerkers">
+        <app-medewerker [medewerker]="mw"></app-medewerker>
+    </div>
+    <button class="btn btn-secondary" (click)="Wissen()">Lijst wissen</button>
+</div>
+<div *ngIf="!listFilled">
+    <p>Je lijst is leeg. Gelieve iemand toe te voegen.</p>
 </div>
