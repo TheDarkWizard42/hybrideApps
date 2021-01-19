@@ -8,12 +8,11 @@ body{
 h1{
     color: whitesmoke;
 }
-.btn-primary{
+.btn-black-white{
     background-color: whitesmoke;
     color: black;
     font-weight: 900;
-    &.active{    background-color: whitesmoke;
-        color: black;}
-        &:hover{    background-color: whitesmoke;
-            color: black;}
+    &:hover{
+        background-color: lightgray;
+    }
 }
