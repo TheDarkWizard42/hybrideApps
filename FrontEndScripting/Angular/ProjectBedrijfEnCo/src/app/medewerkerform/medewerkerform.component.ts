@@ -15,11 +15,12 @@ export class MedewerkerformComponent implements OnInit {
   reset = false;
   medewerkers: Medewerker[] = [];
   listFilled: boolean = true;
+  constructor(private gebruikersService: GebruikerService) {
+    this.gebruikersService.getMedewerkers().subscribe(data => { this.medewerkers = data });
+  }
 
   public Toevoegen() {
-    let mw = new Medewerker(this.name, this.email, this.afb);
-    this.medewerkers.push(mw);
-    console.log(mw);
+    this.gebruikersService.addMedewerker(this.name, this.email, this.afb).subscribe(data => { this.gebruikersService.getMedewerkers().subscribe(data => { this.medewerkers = data }) });
     this.Reset();
     this.listFilled = true;
   }
@@ -43,16 +44,10 @@ export class MedewerkerformComponent implements OnInit {
       return true;
     }
   }
-  addMedewerker() {
-    this.gebruikersService.addMedewerker(this.name, this.email, this.afb);
-  }
   clearMedewerkers() {
     this.gebruikersService.clearMedewerkers();
-    this.medewerkers = this.gebruikersService.getMedewerkers();
   }
-  constructor(private gebruikersService: GebruikerService) {
-    this.medewerkers = this.gebruikersService.getMedewerkers();
-  }
+
   ngOnInit(): void {
   }
 

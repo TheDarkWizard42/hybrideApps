@@ -1,11 +1,16 @@
 <div class="list-group">
-    <button (click)="showAlert(medewerker.naam,medewerker.email)" class="list-group-item list-group-item-action d-flex">
+    <div class="list-group-item list-group-item-action d-flex">
+        <!-- <button (click)="showAlert(medewerker.naam,medewerker.email)" class="list-group-item list-group-item-action d-flex"> -->
         <div class="col-10">
             Naam: {{medewerker.naam}}
-            Email: {{medewerker.email}}
+            Email: {{medewerker.email}}<br>
+            Id: {{medewerker.id}}<br>
+            <button class="btn btn-primary" (click)="verwijderMedewerker(medewerker.id)">Verwijderen</button>
         </div>
         <div class="col-2">
             <img class="img-fluid rounded-circle" src="{{medewerker.afbeelding}}" />
         </div>
-    </button>
+        <!-- </button> -->
+    </div>
+
 </div>

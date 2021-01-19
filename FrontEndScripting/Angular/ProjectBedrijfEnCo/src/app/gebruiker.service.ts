@@ -1,20 +1,36 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Medewerker } from './medewerker';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GebruikerService {
-  private medewerkers: Medewerker[] = [{ naam: "Maxim", email: "rez@zserz", afbeelding: "https://static.wikia.nocookie.net/dota2_gamepedia/images/2/23/Axe_icon.png/revision/latest/scale-to-width-down/150?cb=20160411211422" }, { naam: "Silke", email: "reqsfdfgz@dsq", afbeelding: "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a5/Earthshaker_icon.png/revision/latest/scale-to-width-down/150?cb=20160411205323" }];
-  getMedewerkers(): Medewerker[] {
-    return this.medewerkers;
+  constructor(private http: HttpClient) { }
+  getMedewerkers(): Observable<Medewerker[]> {
+
+    return this.http.get<Medewerker[]>("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users.json")
+      .pipe(map(data => {
+        let arr: Medewerker[] = [];
+        for (let x in data) {
+          let m: Medewerker = new Medewerker(data[x]["naam"], data[x]["email"], data[x]["afbeelding"],x);
+          arr.push(m);
+        }
+        return arr
+      }));
   }
   addMedewerker(name: string, email: string, image: string) {
     let m: Medewerker = new Medewerker(name, email, image)
-    this.medewerkers.push(m);
+    return this.http.post("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users.json", m);
+    //this.medewerkers.push(m);
+  }
+  deleteMedewerker(id: string) {
+    this.http.delete("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users/" + id + ".json").subscribe(data => { });
   }
   clearMedewerkers() {
-    this.medewerkers = [];
+    //this.medewerkers = [];
   }
-  constructor() { }
+
 }

@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MedewerkerformComponent } from './medewerkerform/medewerkerform.component';
 import { FormsModule } from '@angular/forms';
 import { MedewerkerComponent } from './medewerker/medewerker.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MedewerkerComponent } from './medewerker/medewerker.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
