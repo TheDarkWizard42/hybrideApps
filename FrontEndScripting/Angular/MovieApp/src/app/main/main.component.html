@@ -1,0 +1,14 @@
+<h1>Movie App</h1>
+<form>
+    <div class="form-row">
+        <div class="col"> <input type="text" class="form-control" id="search" [(ngModel)]="search" name="search"
+                placeholder="Movie, serie, ..."></div>
+        <div class="col"><button class="btn btn-primary" (click)="SearchMovies()">Search</button></div>
+
+
+    </div>
+</form>
+
+<div class="card-colums p-3 d-flex flex-wrap">
+    <app-movies *ngFor="let movie of movielist" [movie]="movie"></app-movies>
+</div>
