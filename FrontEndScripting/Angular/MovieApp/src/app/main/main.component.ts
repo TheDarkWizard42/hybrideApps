@@ -10,9 +10,13 @@ import { MoviesService } from '../movies.service';
 export class MainComponent implements OnInit {
   search: string = "";
   movielist: Movies[] = [];
+  selectedMovie: Movies = new Movies("", "", "");
   constructor(private moviesService: MoviesService) { }
   public SearchMovies() {
     this.moviesService.getMovies(this.search).subscribe(data => { this.movielist = data });
+  }
+  public getPlot(movie: Movies) {
+    this.moviesService.getPlot(movie).subscribe(data => { this.selectedMovie.Plot = data; });
   }
   ngOnInit(): void {
   }
