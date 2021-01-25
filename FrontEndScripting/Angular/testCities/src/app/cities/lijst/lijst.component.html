@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-6">
+        <h2>List</h2>
+        <ul class="list-group">
+            <li *ngFor="let c of cities" (click)="showDetails(c)" class="list-group-item">
+                {{c.name}} <span class="badge badge-dark float right">{{c.rating}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-6" *ngIf="selectedCity">
+        <app-detail [city]="selectedCity" (rating)="updateRatring($event)"></app-detail>
+    </div>
+</div>
