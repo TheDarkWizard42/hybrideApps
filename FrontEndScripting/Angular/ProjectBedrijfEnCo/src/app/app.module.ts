@@ -10,7 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { MedewerkerformComponent } from './medewerkerform/medewerkerform.component';
 import { FormsModule } from '@angular/forms';
 import { MedewerkerComponent } from './medewerker/medewerker.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { KlantenComponent } from './klanten/klanten.component';
+import { BestellingenComponent } from './bestellingen/bestellingen.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http'
     MainComponent,
     FooterComponent,
     MedewerkerformComponent,
-    MedewerkerComponent
+    MedewerkerComponent,
+    KlantenComponent,
+    BestellingenComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,18 @@
+<div class="container d-flex justify-content-end mt-5">
+    <button (click)="newMedewerker()" class="btn btn-success">+ Medewerker aanmaken</button>
+</div>
 <div class="list-group">
-    <div class="list-group-item list-group-item-action d-flex">
-        <!-- <button (click)="showAlert(medewerker.naam,medewerker.email)" class="list-group-item list-group-item-action d-flex"> -->
-        <div class="col-10">
-            Naam: {{medewerker.naam}}
-            Email: {{medewerker.email}}<br>
-            Id: {{medewerker.id}}<br>
-            <button class="btn btn-primary" (click)="verwijderMedewerker(medewerker.id)">Verwijderen</button>
+    <div *ngFor="let mw of medewerkers">
+        <div class="list-group-item list-group-item-action d-flex">
+            <div class="col-10">
+                Naam: {{mw.naam}}
+                Email: {{mw.email}}<br>
+                Id: {{mw.id}}<br>
+                <button class="btn btn-primary" (click)="verwijderMedewerker(mw.id)">Verwijderen</button>
+            </div>
+            <div class="col-2">
+                <img class="img-fluid rounded-circle" src="{{mw.afbeelding}}" />
+            </div>
         </div>
-        <div class="col-2">
-            <img class="img-fluid rounded-circle" src="{{medewerker.afbeelding}}" />
-        </div>
-        <!-- </button> -->
     </div>
-
 </div>

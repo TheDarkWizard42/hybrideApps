@@ -1,32 +1,23 @@
-<hr>
-<h1>Medewerkers</h1>
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Medewerker</label>
-        <input type="text" class="form-control" id="name" aria-describedby="name" [(ngModel)]="name" name="name">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">E-mail</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter email" [(ngModel)]="email" name="email">
-    </div>
-    <div class="form-group">
-        <label for="formGroupExampleInput">Afbeelding</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" [(ngModel)]="afb" name="afb">
-    </div>
-    <div class="d-flex justify-content-end">
-        <button (click)="Toevoegen()" class="btn btn-primary">Toevoegen</button>
-        <button (click)="Reset()" class="btn btn-primary mx-2" [disabled]="Resetknop()">Reset</button>
-    </div>
-</form>
-<hr>
-
-<div *ngIf="listFilled">
-    <div *ngFor="let mw of medewerkers">
-        <app-medewerker [medewerker]="mw"></app-medewerker>
-    </div>
-    <button class="btn btn-secondary" (click)="Wissen()">Lijst wissen</button>
-</div>
-<div *ngIf="!listFilled">
-    <p>Je lijst is leeg. Gelieve iemand toe te voegen.</p>
+<div class="container">
+    <hr>
+    <h1>Medewerker Toevoegen</h1>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Medewerker</label>
+            <input type="text" class="form-control" id="name" aria-describedby="name" [(ngModel)]="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">E-mail</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email" [(ngModel)]="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Afbeelding</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" [(ngModel)]="afb" name="afb">
+        </div>
+        <div class="d-flex justify-content-end">
+            <button (click)="Toevoegen()" class="btn btn-primary">Toevoegen</button>
+            <button (click)="Reset()" class="btn btn-primary mx-2" [disabled]="Resetknop()">Reset</button>
+        </div>
+    </form>
 </div>

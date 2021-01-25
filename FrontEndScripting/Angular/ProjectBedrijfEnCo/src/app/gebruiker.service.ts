@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { count } from 'rxjs/operators';
 import { map } from 'rxjs/operators';
 import { Medewerker } from './medewerker';
 
@@ -15,7 +16,7 @@ export class GebruikerService {
       .pipe(map(data => {
         let arr: Medewerker[] = [];
         for (let x in data) {
-          let m: Medewerker = new Medewerker(data[x]["naam"], data[x]["email"], data[x]["afbeelding"],x);
+          let m: Medewerker = new Medewerker(data[x]["naam"], data[x]["email"], data[x]["afbeelding"], x);
           arr.push(m);
         }
         return arr
@@ -26,11 +27,19 @@ export class GebruikerService {
     return this.http.post("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users.json", m);
     //this.medewerkers.push(m);
   }
-  deleteMedewerker(id: string) {
-    this.http.delete("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users/" + id + ".json").subscribe(data => { });
-  }
-  clearMedewerkers() {
-    //this.medewerkers = [];
+  deleteMedewerker(id: string):Observable<any> {
+   return this.http.delete("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users/" + id + ".json");
   }
 
+  aantalMdwOphalen(): Observable<number> {
+    return this.http.get<Medewerker[]>("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users.json")
+      .pipe(map(data => {
+        let arr: Medewerker[] = [];
+        for (let x in data) {
+          let m: Medewerker = new Medewerker(data[x]["naam"], data[x]["email"], data[x]["afbeelding"], x);
+          arr.push(m);
+        }
+        return arr.length
+      }));
+  }
 }

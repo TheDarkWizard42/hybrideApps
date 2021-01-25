@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GebruikerService } from '../gebruiker.service';
 import { Medewerker } from '../medewerker';
 
@@ -15,19 +16,18 @@ export class MedewerkerformComponent implements OnInit {
   reset = false;
   medewerkers: Medewerker[] = [];
   listFilled: boolean = true;
-  constructor(private gebruikersService: GebruikerService) {
-    this.gebruikersService.getMedewerkers().subscribe(data => { this.medewerkers = data });
+  constructor(private gebruikersService: GebruikerService, private router: Router) {
   }
 
   public Toevoegen() {
-    this.gebruikersService.addMedewerker(this.name, this.email, this.afb).subscribe(data => { this.gebruikersService.getMedewerkers().subscribe(data => { this.medewerkers = data }) });
+    this.gebruikersService.addMedewerker(this.name, this.email, this.afb).subscribe(x => this.backToList());
     this.Reset();
     this.listFilled = true;
   }
-  public Wissen() {
-    this.medewerkers = [];
-    this.listFilled = false;
+  backToList(): void {
+    this.router.navigateByUrl("/medewerker");
   }
+
 
   public Reset() {
     this.name = "";
@@ -44,9 +44,7 @@ export class MedewerkerformComponent implements OnInit {
       return true;
     }
   }
-  clearMedewerkers() {
-    this.gebruikersService.clearMedewerkers();
-  }
+
 
   ngOnInit(): void {
   }
