@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { count } from 'rxjs/operators';
 import { map } from 'rxjs/operators';
 import { Medewerker } from './medewerker';
 
@@ -27,8 +26,8 @@ export class GebruikerService {
     return this.http.post("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users.json", m);
     //this.medewerkers.push(m);
   }
-  deleteMedewerker(id: string):Observable<any> {
-   return this.http.delete("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users/" + id + ".json");
+  deleteMedewerker(id: string): Observable<any> {
+    return this.http.delete("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Users/" + id + ".json");
   }
 
   aantalMdwOphalen(): Observable<number> {

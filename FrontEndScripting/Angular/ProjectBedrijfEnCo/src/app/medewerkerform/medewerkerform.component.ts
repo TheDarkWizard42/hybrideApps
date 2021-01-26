@@ -22,7 +22,6 @@ export class MedewerkerformComponent implements OnInit {
   public Toevoegen() {
     this.gebruikersService.addMedewerker(this.name, this.email, this.afb).subscribe(x => this.backToList());
     this.Reset();
-    this.listFilled = true;
   }
   backToList(): void {
     this.router.navigateByUrl("/medewerker");

@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { MedewerkerComponent } from './medewerker/medewerker.component';
 import { HttpClientModule } from '@angular/common/http';
 import { KlantenComponent } from './klanten/klanten.component';
-import { BestellingenComponent } from './bestellingen/bestellingen.component'
+import { BestellingenComponent } from './bestellingen/bestellingen.component';
+import { KlantdetailsComponent } from './klantdetails/klantdetails.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BestellingenComponent } from './bestellingen/bestellingen.component'
     MedewerkerformComponent,
     MedewerkerComponent,
     KlantenComponent,
-    BestellingenComponent
+    BestellingenComponent,
+    KlantdetailsComponent
   ],
   imports: [
     BrowserModule,

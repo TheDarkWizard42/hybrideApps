@@ -8,7 +8,7 @@ import { GebruikerService } from '../gebruiker.service';
 })
 export class MainComponent implements OnInit {
 
-  public aantalmdw: number = 0
+  public aantalmdw: number = 0;
   constructor(private gebruikerservice: GebruikerService) {
 
   }
