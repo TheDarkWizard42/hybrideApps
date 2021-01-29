@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BestellingenComponent } from './bestellingen/bestellingen.component';
 import { KlantdetailsComponent } from './klantdetails/klantdetails.component';
 import { KlantenComponent } from './klanten/klanten.component';
+import { KlantregistratieComponent } from './klantregistratie/klantregistratie.component';
 import { MainComponent } from './main/main.component';
 import { MedewerkerComponent } from './medewerker/medewerker.component';
 import { MedewerkerformComponent } from './medewerkerform/medewerkerform.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "klanten", component: KlantenComponent },
   { path: "bestellingen", component: BestellingenComponent },
   { path: "medewerker/new", component: MedewerkerformComponent },
+  { path: "klant/new", component: KlantregistratieComponent },
   { path: "klanten/:id", component: KlantdetailsComponent }
 ];
 

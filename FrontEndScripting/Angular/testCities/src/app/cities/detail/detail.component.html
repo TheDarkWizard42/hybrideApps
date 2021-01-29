@@ -3,7 +3,7 @@
     <li class="list-group-item">Name: {{city.name}}</li>
     <li class="list-group-item">Province: {{city.province}}</li>
     <li class="list-group-item">Highlights: <br> <span
-            *ngFor="let h of city.highlights"><strong>{{h}}</strong><br></span></li>
+            *ngFor="let h of city.highlights"><strong>{{h.name}}</strong><br></span></li>
 </ul>
 <br>
 <button (click)="rate(+1)" class="btn btn-primary">+1 Rating</button> &nbsp;

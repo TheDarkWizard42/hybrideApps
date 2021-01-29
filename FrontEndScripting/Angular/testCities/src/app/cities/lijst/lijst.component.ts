@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CityService } from 'src/app/city.service';
 import { City } from '../city';
 
 @Component({
@@ -7,17 +9,15 @@ import { City } from '../city';
   styleUrls: ['./lijst.component.scss']
 })
 export class LijstComponent implements OnInit {
-  cities: City[] = [
-    { id: 1, name: "leuven", province: "vlaams-brabant", highlights: ["begijnhof", "kruidentuin"], rating: 5 },
-    { id: 2, name: "Diest", province: "vlaams-brabant", highlights: ["citadel", "begijnhof"] }
-  ]
+  cities: Observable<City[]> ;
 
   selectedCity: City;
 
 
-  constructor() { }
+  constructor(private cityService: CityService) { }
 
   ngOnInit(): void {
+    this.cities=this.cityService.getCities();
   }
   showDetails(city: City) {
     this.selectedCity = city

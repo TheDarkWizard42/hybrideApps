@@ -13,7 +13,8 @@ import { MedewerkerComponent } from './medewerker/medewerker.component';
 import { HttpClientModule } from '@angular/common/http';
 import { KlantenComponent } from './klanten/klanten.component';
 import { BestellingenComponent } from './bestellingen/bestellingen.component';
-import { KlantdetailsComponent } from './klantdetails/klantdetails.component'
+import { KlantdetailsComponent } from './klantdetails/klantdetails.component';
+import { KlantregistratieComponent } from './klantregistratie/klantregistratie.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { KlantdetailsComponent } from './klantdetails/klantdetails.component'
     MedewerkerComponent,
     KlantenComponent,
     BestellingenComponent,
-    KlantdetailsComponent
+    KlantdetailsComponent,
+    KlantregistratieComponent
   ],
   imports: [
     BrowserModule,
