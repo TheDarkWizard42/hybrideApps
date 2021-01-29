@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bedrijfcoproject": {
+      "hosting": {
+        "ProjectBedrijfEnCo": [
+          "bedrijfcoproject"
+        ]
+      }
+    }
+  }
+}

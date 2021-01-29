@@ -28,6 +28,6 @@ export class KlantService {
   }
   addKlant(naam: string, plaats: string, postcode: number, straat: string, voornaam: string) {
     let klant: Klant = new Klant(naam, plaats, postcode, straat, voornaam);
-    return this.http.post("https://mijneersteapp-e0fee-default-rtdb.europe-west1.firebasedatabase.app/Klanten.json", klant);
+    return this.http.post("https://bedrijfcoproject-default-rtdb.europe-west1.firebasedatabase.app/Klanten.json", klant);
   }
 }
