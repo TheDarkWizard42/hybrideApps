@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CityService } from 'src/app/city.service';
 import { City } from '../city';
@@ -9,15 +10,15 @@ import { City } from '../city';
   styleUrls: ['./lijst.component.scss']
 })
 export class LijstComponent implements OnInit {
-  cities: Observable<City[]> ;
+  cities: Observable<City[]>;
 
   selectedCity: City;
 
 
-  constructor(private cityService: CityService) { }
+  constructor(private cityService: CityService, private router: Router) { }
 
   ngOnInit(): void {
-    this.cities=this.cityService.getCities();
+    this.cities = this.cityService.getCities();
   }
   showDetails(city: City) {
     this.selectedCity = city
@@ -27,5 +28,8 @@ export class LijstComponent implements OnInit {
       this.selectedCity.rating = 0
     }
     this.selectedCity.rating += rating;
+  }
+  toevoegen() {
+    this.router.navigateByUrl("/nieuw");
   }
 }

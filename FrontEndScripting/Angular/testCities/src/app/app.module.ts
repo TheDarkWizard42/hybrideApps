@@ -7,18 +7,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailComponent } from './cities/detail/detail.component';
 import { LijstComponent } from './cities/lijst/lijst.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NieuwComponent } from './nieuw/nieuw.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailComponent,
-    LijstComponent
+    LijstComponent,
+    NieuwComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

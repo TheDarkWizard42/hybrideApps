@@ -1,0 +1,18 @@
+<h1>Toevoegen</h1>
+<form>
+    Name:
+    <input type="text" name="name" [(ngModel)]="newcity.name"><br>
+    Province:
+    <input type="text" name="province" [(ngModel)]="newcity.province"><br>
+    Highlights:
+    <button class="btn btn-secondary" (click)="addHighlight()">+</button>
+    <div *ngFor="let h of newcity.highlights; index as i;trackBy: trackByItems">
+        Highlight {{i}}:
+        <input type="text" name="highlight{{i}}" [(ngModel)]="h.name">
+        <button class=" btn btn-danger" (click)="removeHighlight(i)">-</button>
+    </div>
+    <br>{{newcity.highlights|json}}
+
+
+    <button class="btn btn-primary" (click)="opslaan()">Opslaan</button>
+</form>

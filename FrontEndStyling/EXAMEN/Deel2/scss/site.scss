@@ -74,8 +74,9 @@ body {
 
 /* Custom CSS
 -------------------------------------------------- */
-body,.sidebar {
+body, .sidebar {
     background-color: white;
+    font-family: 'Merriweather', serif;
 }
 .navbar-blue {
     background-color: #37008f;
@@ -162,7 +163,13 @@ body,.sidebar {
     background-color: #f84337;
     border-color: #f84337;
 }
-/*    .btn-danger:hover {
-        background-color: #f84337;
-        border-color: #f84337;
-    }*/
+
+/*BADGE INFO*/
+.badge-info {
+    background-color: #01c9b7;
+    color:black;
+    font-weight:700;
+}
+    h1, h2, h3 {
+    font-family: 'Yusei Magic', sans-serif;
+}
