@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Bestelling } from '../bestelling';
+import { BestellingService } from '../bestelling.service';
+import { Klant } from '../klant';
+import { KlantService } from '../klant.service';
 
 @Component({
   selector: 'app-bestellingen',
@@ -6,10 +11,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bestellingen.component.scss']
 })
 export class BestellingenComponent implements OnInit {
-
-  constructor() { }
+  klanten: Klant[] = [];
+  bestellingen:Bestelling[]=[];
+  constructor(private klantservice: KlantService, private bestellingservice: BestellingService) { }
 
   ngOnInit(): void {
+    this.klantservice.getKlanten().subscribe(x => { this.klanten = x });
+    this.bestellingservice.getOrders().subscribe(x=>{this.bestellingen=x})
+  }
+  removeOrder(){
   }
 
 }

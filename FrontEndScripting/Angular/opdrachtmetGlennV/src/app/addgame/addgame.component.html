@@ -1,0 +1,36 @@
+<form>
+    <div class="container">
+        <label for="naam">Naam:</label>
+        <input type="text" name="naam" #naam><br>
+        <label for="prijs">Prijs:</label>
+        <input type="text" name="prijs" #prijs><br>
+        <label for="rating">Rating:</label>
+        <input type="text" name="rating" #rating><br>
+        
+ <!-- radio buttons -->
+
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" #radio1>
+            <label class="custom-control-label" for="customRadio1">Standard edition</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" #radio2>
+            <label class="custom-control-label" for="customRadio2">Deluxe edition</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" #radio3>
+            <label class="custom-control-label" for="customRadio3">Gold edition</label>
+          </div>
+
+          <div class="form-outline">
+            <label class="form-label" for="textAreaExample">Description</label>
+            <textarea class="form-control" id="textAreaExample" rows="4" #text></textarea>
+          </div>
+
+          <input type="checkbox" name="tos" > &nbsp;
+          <label for="tos" required>I agree to terms and services</label><br>
+
+
+        <button type="submit" class="btn btn-primary" (click)="addGame(naam, prijs, rating, radio1, radio2, radio3, text)">Opslaan</button>
+    </div>
+</form>

@@ -1,1 +1,24 @@
-<p>bestellingen works!</p>
+<form action="">
+    <select class="form-control">
+        <option *ngFor="let klant of klanten" id="{{klant.id}}">{{klant.voornaam}} {{klant.naam}}</option>
+    </select>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">product</th>
+                <th scope="col">prijs</th>
+                <th scope="col">aantal</th>
+                <th scope="col">Totaal</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let order of bestellingen">
+            <tr>
+                <td> <button (click)="removeOrder()" class="btn btn-danger">-</button></td>
+                <td><input type="text" value="{{order.naam}}"></td>
+                <td><input type="text" value="{{order.prijs}}"></td>
+                <td><input type="text" value="{{order.aantal}}"></td>
+                <td>{{order.aantal*order.prijs}}</td>
+            </tr>
+        </tbody>
+    </table>
+</form>
