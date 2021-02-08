@@ -1,0 +1,9 @@
+<h1>Boodschappenlijst</h1>
+<form>
+  <input type="text" id="product" [(ngModel)]="product" aria-describedby="product" name="product">
+  <input type="button" value="Opslaan" (click)="opslaan()"><br>
+  <button (click)="Leegmaken()">Leegmaken</button>
+</form>
+<ul *ngFor="let product of producten">
+  <li>{{product}}</li>
+</ul>

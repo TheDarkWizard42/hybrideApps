@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MoviesService {
-
+  public favorieten: Movies[] = [];
   constructor(private http: HttpClient) { }
   getMovies(searchterm: string): Observable<Movies[]> {
     return this.http.get<Movies[]>("http://www.omdbapi.com/?apikey=8e10404c&s=" + searchterm)
@@ -25,8 +25,16 @@ export class MoviesService {
       }));
   }
   getPlot(movie: Movies) {
-   return this.http.get<Movies>("http://www.omdbapi.com/?apikey=8e10404c&t=" + movie.Title + "&plot=full").pipe(map(data2 => { return data2["Plot"] }));
-
+    return this.http.get<Movies>("http://www.omdbapi.com/?apikey=8e10404c&t=" + movie.Title + "&plot=full").pipe(map(data2 => { return data2["Plot"] }));
   }
-
+  public addFavorite(v: Movies) {
+    this.favorieten.push(v);
+    localStorage.setItem("favorieten", JSON.stringify(this.favorieten));
+  }
+  public getFavorites() {
+    if (localStorage.getItem("favorieten") != null) {
+      this.favorieten = JSON.parse(localStorage.getItem("favorieten"));
+      return this.favorieten;
+    }
+  }
 }

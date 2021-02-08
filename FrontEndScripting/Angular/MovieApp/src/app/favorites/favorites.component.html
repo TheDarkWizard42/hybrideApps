@@ -1,0 +1,12 @@
+<h1 class="text-white my-5">Favorieten</h1>
+<button class="btn btn-black-white" routerLink="/main">Home</button>
+<div class="card-colums p-3 d-flex flex-wrap">
+    <!-- <app-movies *ngFor="let movie of movielist" [movie]="movie"></app-movies> -->
+    <div *ngFor="let favorit of favorieten" class="card m-2" style="width: 18rem;">
+        <img class="card-img-top" src="{{favorit.Poster}}">
+        <div class="card-body">
+            <h5 class="card-title">Title: {{favorit.Title}}</h5>
+            <p class="card-text">Year: {{favorit.Year}}</p>
+        </div>
+    </div>
+</div>

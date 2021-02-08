@@ -18,6 +18,9 @@ export class MainComponent implements OnInit {
   public getPlot(movie: Movies) {
     this.moviesService.getPlot(movie).subscribe(data => { this.selectedMovie.Plot = data; });
   }
+  public addFavorit(v: Movies) {
+    this.moviesService.addFavorite(v);
+  }
   ngOnInit(): void {
   }
 

@@ -4,10 +4,9 @@
         <div class="col"> <input type="text" class="form-control" id="search" [(ngModel)]="search" name="search"
                 placeholder="Movie, serie, ..."></div>
         <div class="col"><button class="btn btn-black-white" (click)="SearchMovies()">Search</button></div>
-
-
     </div>
 </form>
+<button class="btn btn-black-white" routerLink="/favorites">Naar favorieten</button>
 
 <div class="card-colums p-3 d-flex flex-wrap">
     <!-- <app-movies *ngFor="let movie of movielist" [movie]="movie"></app-movies> -->
@@ -17,8 +16,9 @@
             <h5 class="card-title">Title: {{movie.Title}}</h5>
             <p class="card-text">Year: {{movie.Year}}</p>
             <button type="button" class="btn btn-black-white" data-toggle="modal" data-target="#exampleModal"
-                (click)="getPlot(movie)">Plot</button>
-
+                (click)="getPlot(movie)">Plot</button><button class="btn btn-black-white"
+                (click)="addFavorit(movie)">Add
+                Favorite</button>
         </div>
     </div>
 </div>
