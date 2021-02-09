@@ -9,8 +9,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Zoeken</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Search" #zoekveld>
+            <button class="btn btn-secondary my-2 my-sm-0" (click)="zoekterm(zoekveld.value)">Zoeken</button>
         </form>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">

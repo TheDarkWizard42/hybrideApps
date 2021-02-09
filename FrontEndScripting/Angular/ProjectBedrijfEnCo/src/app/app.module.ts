@@ -14,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { KlantenComponent } from './klanten/klanten.component';
 import { BestellingenComponent } from './bestellingen/bestellingen.component';
 import { KlantdetailsComponent } from './klantdetails/klantdetails.component';
-import { KlantregistratieComponent } from './klantregistratie/klantregistratie.component'
+import { KlantregistratieComponent } from './klantregistratie/klantregistratie.component';
+import { ZoekresultatenComponent } from './zoekresultaten/zoekresultaten.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { KlantregistratieComponent } from './klantregistratie/klantregistratie.c
     KlantenComponent,
     BestellingenComponent,
     KlantdetailsComponent,
-    KlantregistratieComponent
+    KlantregistratieComponent,
+    ZoekresultatenComponent
   ],
   imports: [
     BrowserModule,

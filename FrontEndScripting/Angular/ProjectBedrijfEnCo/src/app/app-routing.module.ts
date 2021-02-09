@@ -7,6 +7,7 @@ import { KlantregistratieComponent } from './klantregistratie/klantregistratie.c
 import { MainComponent } from './main/main.component';
 import { MedewerkerComponent } from './medewerker/medewerker.component';
 import { MedewerkerformComponent } from './medewerkerform/medewerkerform.component';
+import { ZoekresultatenComponent } from './zoekresultaten/zoekresultaten.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "main", pathMatch: "full" },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: "bestellingen", component: BestellingenComponent },
   { path: "medewerker/new", component: MedewerkerformComponent },
   { path: "klant/new", component: KlantregistratieComponent },
+  { path: "zoekresultaten", component: ZoekresultatenComponent },
   { path: "klanten/:id", component: KlantdetailsComponent }
 ];
 

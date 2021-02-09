@@ -1,0 +1,18 @@
+<h1>Medewerkers</h1>
+<tbody>
+    <tr *ngFor="let mdw of filterGebruiker">
+        <td> Naam: {{mdw.naam}}</td>
+    </tr>
+</tbody>
+<h1>Klanten</h1>
+<tbody>
+    <tr *ngFor="let klant of filterKlant">
+        <td> Naam: <a routerLink="/klanten/{{klant.id}}">{{klant.naam}}</a></td>
+    </tr>
+</tbody>
+<!-- <h1>Bestellingen</h1>
+<tbody >
+    <tr *ngFor="let klant of filterKlant">
+        Naam: {{klant.naam}}
+    </tr>
+</tbody> -->
