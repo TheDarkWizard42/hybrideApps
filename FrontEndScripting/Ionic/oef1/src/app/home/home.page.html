@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recepten</ion-title>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Nieuw Recept</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>Naam van gerecht</ion-label>
+        <ion-input type="text" placeholder="gerechtsnaam"></ion-input>
+        <ion-label>Instructies</ion-label>
+        <ion-input type="text" placeholder="gerechtsnaam"></ion-input>
+      </ion-card-content>
+      <div class="ion-text-right">
+        <ion-button color="danger" (click)="onClick()" fill="outline" >
+          <ion-icon name="close-outline"></ion-icon>RESET
+        </ion-button>
+        <ion-button color="primary" (click)="onClick()" fill="solid" >
+          <ion-icon name="add-outline"></ion-icon> Opslaan
+        </ion-button>
+      </div>
+    </ion-card>
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Recept Toevoegen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Naam</ion-label>
+    <ion-input type="text" placeholder="naam" name="naam" [(ngModel)]="recept.naam"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Ingrediënten</ion-label>
+    <ion-input type="text" placeholder="Ingrediënten" name="ingredienten" [(ngModel)]="recept.ingredienten"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Image</ion-label>
+    <ion-input type="text" placeholder="Ingrediënten" name="img" [(ngModel)]="recept.img"></ion-input>
+  </ion-item>
+  <ion-button (click)="opslaan()" expand="block" fill="solid" shape="round">
+    Opslaan
+  </ion-button>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mijn eerste app</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Aanmelden</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Login </ion-label>
+        <ion-input type="text" placeholder="Awesome Input"></ion-input>
+        <ion-label position="floating">wachtwoord </ion-label>
+        <ion-input type="text" placeholder="Awesome Input"></ion-input>
+      </ion-item>
+      <div class="ion-text-lg-right">
+        <ion-button (click)="onClick()" fill="clear" shape="round">
+          Reset
+        </ion-button>
+        <ion-button (click)="onClick()" fill="clear" shape="round">
+          Aanmelden
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

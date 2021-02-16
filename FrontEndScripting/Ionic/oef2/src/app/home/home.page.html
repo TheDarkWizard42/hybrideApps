@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gerechten</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card *ngFor="let gerecht of gerechten">
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="4">
+            <ion-thumbnail>
+              <img src="{{gerecht.image}}" />
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col class="ion-text-center" size="8">
+            <ion-card-title>{{gerecht.name}}</ion-card-title>
+            <ion-button (click)="onClick()" fill="solid">
+              Bestellen
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

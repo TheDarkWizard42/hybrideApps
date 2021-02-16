@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input type="text" placeholder="Movie, serie, ..." [(ngModel)]="search"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="SearchMovies()" expand="block" fill="solid" shape="round">
+          Search
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let movie of movielist">
+            <ion-thumbnail slot="start">
+              <img src="{{movie.Poster}}" />
+            </ion-thumbnail>
+            <ion-label [routerLink]="['./moviedetails/',movie.Title]">{{movie.Title}}</ion-label>
+            <ion-label>{{movie.Year}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

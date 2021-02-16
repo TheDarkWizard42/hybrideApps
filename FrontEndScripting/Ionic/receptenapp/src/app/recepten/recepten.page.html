@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>recepten</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let recept of recepten">
+      <ion-avatar slot="start">
+        <ion-img [src]="recept.img"></ion-img>
+      </ion-avatar>
+
+      <ion-label [routerLink]="['./receptdetail/',recept.id]">{{recept.naam}}</ion-label>
+      <ion-button [routerLink]="['./receptform/',recept.id]">
+        Edit
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-button routerLink="/recepten/receptform/nieuw">
+    Nieuw
+  </ion-button>
+</ion-content>
