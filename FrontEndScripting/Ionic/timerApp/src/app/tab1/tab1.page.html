@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-text-center">
+    <ion-row>
+      <ion-col size="6">
+        <ion-input type="text" placeholder="seconden" #sec></ion-input>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="setSeconds(sec.value)" expand="block" fill="clear" shape="round">
+          Bevestigen
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+<ion-row>
+  <ion-col size=6><ion-button (click)="starttimer()" expand="block" fill="clear" shape="round">
+    Start
+  </ion-button></ion-col>
+  <ion-col size=6><ion-button (click)="pauzeertimer()" expand="block" fill="clear" shape="round">
+    Pauze
+  </ion-button></ion-col>
+</ion-row>
+    
+    <br>
+    <circle-progress [title]="seconden.toString()" subtitle="" units="" [percent]="percentage" [radius]="100"
+      [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'"
+      [animation]="false" [animationDuration]="300"></circle-progress>
+  </div>
+  <ion-col size=6><ion-button (click)="reset()" expand="block" fill="clear" shape="round">
+    Reset
+  </ion-button></ion-col>
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Netwerk Status
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="status">
+    Verbonden: {{status.connected}}
+    <br>
+    Type verbinding: {{status.connectionType}}
+  </div>
+</ion-content>

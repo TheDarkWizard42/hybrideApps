@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Batterij Info
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <p *ngIf="info">Batterij {{info.batteryLevel*100}}%</p>
+  <ion-progress-bar *ngIf="info" [value]="info.batteryLevel" buffer="0.5" color="primary">
+  </ion-progress-bar>
+</ion-content>

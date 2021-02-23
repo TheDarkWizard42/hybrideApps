@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>foto</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-label>Naam:</ion-label>
+      <ion-input type="text" placeholder="Naam" [(ngModel)]="naam"></ion-input>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-button (click)="neemFoto()" expand="block" fill="solid" shape="round">
+          Neem een foto
+        </ion-button>
+      </ion-col>
+      <ion-col *ngIf="naam!='' && base64data!=''" size="6">
+        <ion-button (click)="opslaan()" expand="block" fill="solid" shape="round">
+          Opslaan
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-img *ngIf="base64data!=''" [src]="'data:image/jpeg;base64,'+base64data" alt=""></ion-img>
+</ion-content>

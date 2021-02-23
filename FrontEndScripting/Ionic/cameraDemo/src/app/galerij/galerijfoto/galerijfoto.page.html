@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="foto.data">{{foto.naam}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="delete()" expand="block" fill="solid" shape="round" color="danger">
+    Foto verwijderen
+  </ion-button>
+  <ion-img *ngIf="foto.data" [src]="'data:image/jpeg;base64,'+foto.data"></ion-img>
+</ion-content>
